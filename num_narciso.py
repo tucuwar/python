@@ -13,9 +13,9 @@ def narcissistic(numero):
     string = str(numero)
     potencia = 0
     for i in string:
-        potencia = pow(int(i),int(pivot) + potencia
+        potencia = pow(int(i),int(pivot)) + potencia
         #print potencia
-    raw_input("Pulsa una tecla para continuar...")
+    #raw_input("Pulsa una tecla para continuar...")
     numero = int(string)
     if (numero==potencia):
         print "El numero %d ES narcisista" %(numero)

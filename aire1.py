@@ -6,6 +6,6 @@ if numero>=100 and numero<=199:
 if numero>=200 and numero<=299:
   print("Alerta")
 if numero>=300 and numero<=499:
-  print("Preemergencia")
+  print("Pre-emergencia")
 else:
   print("Emergencia")

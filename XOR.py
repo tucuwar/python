@@ -1,5 +1,5 @@
 print("Valores de Tabla XOR")
-print("====================")
+print("=====================")
 
 print("Ingrese 'True' o 'False' para evaluar con XOR")
 print("Primer valor")

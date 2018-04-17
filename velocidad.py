@@ -5,7 +5,7 @@ th=(ts/60)/60
 
 print("Tiempo ingresado en segundos " + str(ts))
 print("Equivale en horas a: " + str(th))
-print("=========================")
+print("==========================")
 print("Ingrese distancia en kilometros")
 dk=input()
 

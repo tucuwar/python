@@ -1,4 +1,4 @@
-print("VValores de Tabla XOR")
+print("Valores de Tabla XOR")
 print(" =====================")
 
 print("Ingrese 'True' o 'False' para evaluar con XOR")

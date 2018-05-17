@@ -8,7 +8,7 @@
 def narcissistic(numero):
     tam = len(numero)
     #print tam
-    pivot = numero[tam-1]
+    pivot = numero[tam-1] 
     #print pivot
     string = str(numero)
     potencia = 0

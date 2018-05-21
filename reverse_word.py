@@ -11,7 +11,7 @@ def reverse_words(cad):
         vere.append(a) #voy guardando en lista
     b = " ".join(vere) #lista a string
     return b
-    print b
+
        
 cad = raw_input("Ingrese cadena de texto: ")
 b = reverse_words(cad)

@@ -42,8 +42,8 @@ for d in dolar_dia:
     print (" ")
 
 
-#plt.xlabel("Valor dolar")          # Establece el título del eje x = abscisa
-#plt.ylabel("Días de la semana")    # Establece el título del eje y = ordenada
+#plt.xlabel("Valor dolar")          # Establece el título del eje x = abscisa   !! Se clava si se habilitan
+#plt.ylabel("Días de la semana")    # Establece el título del eje y = ordenada  !! Se clava si se habilitan
 
 print("Comprador",dolar_compra)
 print("Vendedor",dolar_venta)

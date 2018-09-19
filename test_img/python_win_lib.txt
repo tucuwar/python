@@ -1,0 +1,5 @@
+c:\python y c:\python\scripts en variable de entorno PATH
+python -m pip install --upgrade pip #actualizar pip
+python -m pip install easygui
+python -m pip install PyPDF2
+python -m pip install Pillow

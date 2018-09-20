@@ -1,0 +1,4 @@
+Curso: Python para Principiantes
+www.eugeniabahit.com
+
+ejercicios del libro

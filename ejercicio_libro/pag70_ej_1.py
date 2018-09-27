@@ -19,34 +19,28 @@
 
 def validaUsr(usuario):
     tam = len(usuario)
-    alfanum = usuario.isalnum()
-    
+    alfanum = usuario.isalnum() # isalnum() verifica cadena alfanumerica
     if tam >= 6: 
         print ("tam mayor igual que 6 - OK")
+        check1 = True
         if tam <= 12:
             print ("tam menor igual que 12 - OK")
             check1 = True
         else: 
             print ("El nombre de usuario no puede contener más de 12 caracteres")
             check1 = False
-            #return
     else: 
         print ("El nombre de usuario debe contener al menos 6 caracteres")
-        return
-        
+        check1 = False
     if alfanum is True:
         print ("Cadena alfanumerica")
         check2 = True
     else: 
         print ("El nombre de usuario puede contener solo letras y números")
         check2= False
-        #return
-
-    valida = bool(check1) == bool(check2)
-    print valida
-    raw_input("Pulsa una tecla para continuar...sale")     
-        
-                
+    check = bool(check1) == bool(check2)
+    return check
+    #raw_input("Pulsa una tecla para continuar...sale")     
 
 print ("Ingrese usuario y contraseña")
 print (""" Recuerde:

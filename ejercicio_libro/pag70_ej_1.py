@@ -28,7 +28,7 @@ def validaUsr(usuario):
             check1 = True
         else: 
             print ("El nombre de usuario no puede contener más de 12 caracteres")
-            chekck1 = False
+            check1 = False
             #return
     else: 
         print ("El nombre de usuario debe contener al menos 6 caracteres")

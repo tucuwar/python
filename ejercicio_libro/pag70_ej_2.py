@@ -14,27 +14,38 @@
 
 def validaPass(password):
     tam = len(password)
+    check_tam = False
+    check_space = False
+    check_mayus = False
+    check_minus = False
+    check_num = False
+
     if not tam >= 8:
         print ("La contraseña debe tener un largo de 8 caracteres")
-        return
+        #return
     else:
-        #check_tam = True
+        check_tam = True
         print ("pass 8 - OK")
     print (" ")
-    space = password.isspace() # verifica que la pass no sea SOLO espacios en blanco
-    if space is True:
-        print ("La contraseña no puede ser solo espacios en blanco")
-        return
+    
+    #check_space = password.isspace() # verifica que la pass no sea SOLO espacios en blanco
+    #if check_space is not True:
+    #    print ("La contraseña no puede ser solo espacios en blanco")
+    #    return
     print (" ")
     print ("verifica que no existan espacios en blanco")
     for x in password: # verifica que no existan espacios en blanco
         z = x.isspace()
-        if not z is True: 
-            print ("Contraseña sin espacios en blanco - OK")
-        else:
+        
+        if z is True:
             print ("La contraseña no puede contener espacios en blanco")
-            return
-
+            check_space = True
+            #return            
+        else:
+            print ("Contraseña SIN espacios en blanco - OK")
+            
+            
+    
     print (" ")
     print ("verifica que exista al menos una letra mayuscula")        
     for x in password: # verifica que exista al menos una letra mayuscula
@@ -43,10 +54,10 @@ def validaPass(password):
         if z is True:
             print ("Contraseña contiene una mayuscula al menos - OK")
             check_mayus = True
-            break # sale del CICLO del FOR
+            #break # sale del CICLO del FOR
         else: 
             print ("La contraseña debe contener una letra mayuscula") 
-            check_mayus = False
+            #check_mayus = False
 
     print (" ")
     print ("verifica que exista al menos una letra minuscula") 
@@ -56,10 +67,10 @@ def validaPass(password):
         if z is True:
             print ("Contraseña contiene una minuscula al menos - OK")
             check_minus = True
-            break # sale del CICLO del FOR
+            #break # sale del CICLO del FOR
         else: 
             print ("La contraseña debe contener una letra minuscula") 
-            check_minus = False
+            #check_minus = False
 
     print (" ")
     print ("verifica que exista al menos un numero") 
@@ -69,14 +80,15 @@ def validaPass(password):
         if z is True:
             print ("Contraseña contiene un numero al menos - OK")
             check_num = True
-            break # sale del CICLO del FOR
+            #break # sale del CICLO del FOR
         else: 
             print ("La contraseña debe contener al menos un numero") 
-            check_num = False
+            #check_num = False
     
-    check = bool(check_mayus) == bool(check_minus) == bool(check_num)
-
-    if not check is True: print ("La PASSWORD elegida no es segura")
+    check =  ( (bool(check_mayus) == bool(check_minus)) == (bool(check_num) == bool(not check_space)) ) == bool(check_tam)
+    #print check
+    if not check is True: 
+        print ("La PASSWORD elegida no es segura")
     else: print ("La PASSWORD es segura", check)
 
 

@@ -85,11 +85,32 @@ def validaPass(password):
             print ("La contraseña debe contener al menos un numero") 
             #check_num = False
     
-    check =  ( (bool(check_mayus) == bool(check_minus)) == (bool(check_num) == bool(not check_space)) ) == bool(check_tam)
+    #print ("antes", check_space)
+    check_letras = bool(check_mayus) and bool(check_minus)
+    check_num_space = bool(check_num) and bool(not check_space)
+    #check_noalfanum_tam = bool(check_tam) == bool(check_noalfanum)
+
+    check = (check_letras and check_num_space) and bool(check_tam)
+    print (" ")
+    print ("check_letras = check_mayus == check_minus")
+    print check_letras, check_mayus, check_minus
+    print (" ")
+    print "check_num_space = check_num == check_space"
+    print check_num_space, check_num, check_space
+    print (" ")
+    print "check = (check_letras == check_num_space) == (check_tam)"
+    print check, check_letras, check_num_space, check_tam
+    
+
+
+    #print check_letras
+    #print check_num_space
+    #print check_tam
+    #check = ( (bool(check_mayus) == bool(check_minus)) == (bool(check_num) == bool(not check_space)) ) == bool(check_tam)
     #print check
-    if not check is True: 
-        print ("La PASSWORD elegida no es segura")
-    else: print ("La PASSWORD es segura", check)
+    if check is True:
+        print ("La PASSWORD es segura") 
+    else: print ("La PASSWORD elegida no es segura")
 
 
     

@@ -26,49 +26,49 @@ def validaPass(password):
     pwd = noalfanum.search(password)    # pwd guardo resultado en variable
    
     if not tam >= 8:
-        print ("La contraseña debe tener un largo de 8 caracteres")
+        print " " #("La contraseña debe tener un largo de 8 caracteres")
     else:
         check_tam = True
-        print ("pass 8 - OK")
+        #print ("pass 8 - OK")
     
     #print ("verifica que no existan espacios en blanco")
     for x in password: # verifica que no existan espacios en blanco
         z = x.isspace()
         
         if z is True:
-            print ("La contraseña no puede contener espacios en blanco")
+            #print ("La contraseña no puede contener espacios en blanco")
             check_space = True
-        else: print ("Contraseña SIN espacios en blanco - OK")
+        #else: print ("Contraseña SIN espacios en blanco - OK")
                 
     #print ("verifica que exista al menos una letra mayuscula")        
     for x in password: # verifica que exista al menos una letra mayuscula
         z = x.isupper()
-        print x
+        #print x
         if z is True:
-            print ("Contraseña contiene una mayuscula al menos - OK")
+            #print ("Contraseña contiene una mayuscula al menos - OK")
             check_mayus = True
-        else: print ("La contraseña debe contener una letra mayuscula") 
+        #else: print ("La contraseña debe contener una letra mayuscula") 
 
     #print ("verifica que exista al menos una letra minuscula") 
     for x in password: # verifica que exista al menos una letra minuscula
         z = x.islower()
-        print z
+        #print z
         if z is True:
             #print ("Contraseña contiene una minuscula al menos - OK")
             check_minus = True
-        else: print ("La contraseña debe contener una letra minuscula") 
+        #else: print ("La contraseña debe contener una letra minuscula") 
 
     #print ("verifica que exista al menos un numero") 
     for x in password: # verifica que exista al menos un numero
         z = x.isdigit()
-        print z
+        #print z
         if z is True:
             #print ("Contraseña contiene un numero al menos - OK")
             check_num = True
-        else: print ("La contraseña debe contener al menos un numero") 
+        #else: print ("La contraseña debe contener al menos un numero") 
     
     if pwd is None:
-        print ("Faltan caracteres especiales")
+        print " " #("Faltan caracteres especiales")
     else:
         check_noalfanum = True
     
@@ -90,20 +90,20 @@ def validaPass(password):
     #print "check = (check_letras == check_num_space) == (check_tam)"
     #print check, check_letras, check_num_space, check_noalfanum_tam
     
-    if check_pass is True:
-        print ("La PASSWORD es segura") 
-    else: print ("La PASSWORD elegida no es segura")
+    #if check_pass is True:
+    #    print ("La PASSWORD es segura") 
+    #else: print ("La PASSWORD elegida no es segura")
     
     return check_pass
     
     
-print ("Ingrese usuario y contraseña")
-print (""" Recuerde:
-        La contraseña debe contener un mínimo de 8 caracteres.
-        Debe contener letras minúsculas, mayúsculas, números y al menos 1 carácter no alfanumérico.
-        La contraseña no puede contener espacios en blanco.
-        """)
+#print ("Ingrese usuario y contraseña")
+#print (""" Recuerde:
+ #       La contraseña debe contener un mínimo de 8 caracteres.
+ #       Debe contener letras minúsculas, mayúsculas, números y al menos 1 carácter no alfanumérico.
+ #       La contraseña no puede contener espacios en blanco.
+ #       """)
 
-usuario = raw_input("Usuario: ")
-password = raw_input("Contraseña: ")
-validaPass(password)
+#usuario = raw_input("Usuario: ")
+#password = raw_input("Contraseña: ")
+#validaPass(password)

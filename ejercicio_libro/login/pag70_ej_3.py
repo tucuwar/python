@@ -32,7 +32,6 @@ pwd = p.validaPass(password)  #  Guardo el resultado de la funcion que valida pa
 
 
 if (user and pwd) is True:
-#if (u.validaUsr and p.validaPass) is True:
     print ("Usuario y Contraseña - Aceptado")
 else: print ("Usuario o Contraseña mal formado")
 
